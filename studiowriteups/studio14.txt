@@ -2,7 +2,7 @@ Your TA's name:
 
 Students in your studio group:
 
-    Name        WUSTLKey (e.g. "jbuhler")
+    Name        WUSTLKey (e.g. "a.bear")
 	
 1.
 2.
