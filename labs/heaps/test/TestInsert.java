@@ -30,7 +30,7 @@ public class TestInsert extends TestUtil{
 	public void testInsert() {
 		MinHeapValidator<Integer> mhv = genHeap(200);
 		MinHeap<Integer> pq = mhv.pq;	
-		int num = r.nextInt(100) + 1;
+		int num = r.nextInt(100) + 16;
 		for (int i=0; i < num; ++i) {
 			verifySize("before insert", pq, i);
 			verifySizeCapacity(pq);
