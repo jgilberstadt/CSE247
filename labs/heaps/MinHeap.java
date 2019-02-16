@@ -139,7 +139,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		T ans = array[1].getValue();
 		array[1] = array[size];
 		array[size] = null;
-		size = size+1;
+		--this.size;
 		array[1].loc=1;
 		if (size > 1) {
 		heapify(1);
@@ -160,8 +160,8 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//  FIXME
 		//
 		Decreaser<T> x = array[where];
-		if (!(array[2*where].loc>size)) {
-		if ((array[2*where+1].loc>size)&&((array[2*where].getValue().compareTo(array[where].getValue()))<0)) {
+		if ((!(array[2*where].loc>size))&&((array[2*where]!=null))) {
+		if ((array[2*where+1]==null)&&(array[2*where+1].loc>size)&&((array[2*where].getValue().compareTo(array[where].getValue()))<0)) {
 		array[where]=array[2*where];
 		array[2*where]=x;
 		array[where].loc=where;
@@ -171,16 +171,14 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		array[2*where]=x;
 		array[where].loc=where;
 		array[2*where].loc=2*where;
-		heapify(2*where);
-		}else if((!(array[2*where+2].loc>size))&&(!((array[2*where].getValue().compareTo(array[2*where+1].getValue()))<0))&&((array[2*where+1].getValue().compareTo(array[where].getValue()))<0)) {
+		heapify(array[2*where].loc);
+		}else if((!(array[2*where+1].loc>size))&&(!((array[2*where].getValue().compareTo(array[2*where+1].getValue()))<0))&&((array[2*where+1].getValue().compareTo(array[where].getValue()))<0)) {
 		array[where]=array[2*where+1];
 		array[2*where+1]=x;
 		array[where].loc=where;
 		array[2*where+1].loc=2*where+1;
-		heapify(2*where+1);
+		heapify(array[2*where+1].loc);
 		}
-		}else {
-		return;
 		}
 		}
 		
