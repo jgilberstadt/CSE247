@@ -140,6 +140,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		array[1] = array[size];
 		array[size] = null;
 		size = size - 1;
+		array[1].loc=1;
 		if (size > 1) {
 		heapify(1);
 		}
@@ -169,13 +170,13 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		array[2*where]=x;
 		array[where].loc=where;
 		array[2*where].loc=2*where;
-		heapify(where);
+		heapify(2*where);
 		}else if((!((array[2*where].getValue().compareTo(array[2*where+1].getValue()))<0))&&((array[2*where+1].getValue().compareTo(array[where].getValue()))<0)) {
 		array[where]=array[2*where+1];
 		array[2*where+1]=x;
 		array[where].loc=where;
 		array[2*where+1].loc=2*where+1;
-		heapify(where);
+		heapify(2*where+1);
 		}else {
 		return;
 		}
