@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt	   josh.gilberstadt
 2.
 3.
 4.
@@ -13,19 +13,25 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: F(n) = 2F(n-1) + k
 
-Question A2:
+Question A2: The number of flips grows exponentially because the
+maximum number of flips is proportional to 2^n.
 
-Question A3:
+Question A3: Base: F(1) = 2F(0) + k => k = 2.
+F(n) = 2F(n-1) + 2. Claim: F(n) = k(2^(n+1))-2.
+Base (n=1): F(1) = k = k.
+k(n) = 2k(n-1) + k = k(2^n) + k
 
-Question B1:
 
-Question B2:
 
-Question B3:
+Question B1: T(n) = 3*T(n/3) + n
 
-Question C1:
+Question B2: T(n) = 4*T(n/2) + 2n
+
+Question B3: T(n) = T(n/2) + n^3
+
+Question C1: T(n) = Theta(n^2)
 
 Question C2:
 

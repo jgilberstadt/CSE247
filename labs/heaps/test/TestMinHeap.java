@@ -118,8 +118,7 @@ public class TestMinHeap extends TestUtil {
 		String before = d131.toString();
 		mhv.check();
 		pq.insert(1); // should cause 131 to change locations
-		mhv.check();
-		String after = d131.toString();
+ 		String after = d131.toString();
 		assertTrue("You did not update the .loc field of affected heap elements in decrease",
 				!before.equals(after));
 	}

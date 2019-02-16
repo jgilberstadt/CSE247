@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt josh.gilberstadt@wustl.edu
 2.
 3.
 4.
@@ -13,21 +13,28 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: Ticks = n^2 + 3*n, The time graph is quadratic.
 
-Question A2:
+Question A2: Every additional value causes the program to increase
+linearly, meaning that the sum of the linear time increases
+creates a quadratic graph.
 
-Question B1:
+Question B1: The running time curve is now linear because the while
+loop only runs once instead of once per list value.
 
-Question B2:
+Question B2: This change did not require any additional storage.
 
-Question B3:
+Question B3: Adding a tail pointer to a list significantly decreases
+the time it takes for the program to function when the while loop
+runs multiple times. The tail pointer is not worthwhile when the while
+loop only runs once. 
 
-Question C1:
+Question C1: getSize() uses n(n-1)/2 ticks because there are n
+elements that are added with an average value of n-1/2.
 
-Question C2:
+Question C2: I started getSize() at the tail instead of the head so
 
-Question C3:
+Question C3: 
 
 Question D1:
 

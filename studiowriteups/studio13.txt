@@ -4,20 +4,25 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt josh.gilberstadt
 2.
-3.
+3. 
 4.
 5.
 6.
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: Integers, doubles and strings satisfy the properties 
+of Comparable.
 
-Question A2:
+Question A2: The values 1, -1, 1, and 0 are obtained assuming that
+capital letters come before lower case letters and the resulting words
+are sorted alphabetically.
 
-Question A3:
+Question A3: For one value to be less than another in the
+ThaiBuddhistDate class is for one date to occur at an earlier time
+than another date.
 
 Question B1:
 

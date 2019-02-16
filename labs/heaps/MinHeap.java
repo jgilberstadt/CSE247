@@ -66,6 +66,10 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[size] = ans;
+		array[size].loc = size;
+		decrease(size);
+		ticker.tick(5);
 		return ans;
 	}
 
@@ -99,7 +103,21 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// As described in lecture
 		//
-		
+		if (loc==1) {
+		return;
+		}else {
+		if ((array[loc].getValue().compareTo(array[loc/2].getValue()))<0) {
+		moveItem(loc, loc/2);
+		}
+		}
+	}
+	
+	void moveItem(int from, int to) {
+	Decreaser<T> x = array[from];
+	array[from] = array[to];
+	array[to] = x;
+	array[to].loc = to;
+	array[from].loc = from;
 	}
 	
 	/**
@@ -119,6 +137,9 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[1] = array[size];
+		array[size] = null;
+		heapify(array[1].loc);
 		return ans;
 	}
 
@@ -134,7 +155,39 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// As described in lecture
 		//  FIXME
 		//
-	}
+		Decreaser<T> x = array[where];
+		if ((array[2*where]==null)&&(array[2*where+1]==null)){
+		return;
+		}else if ((array[2*where]==null)&&(array[2*where+1]!=null)&&((array[2*where+1].getValue().compareTo(array[where].getValue()))<0)) {
+		array[where]=array[2*where+1];
+		array[2*where]=x;
+		array[where].loc=where;
+		array[2*where+1].loc=2*where+1;
+		}else if ((array[2*where]!=null)&&(array[2*where+1]==null)&&((array[2*where].getValue().compareTo(array[where].getValue()))<0)) {
+		array[where]=array[2*where];
+		array[2*where]=x;
+		array[where].loc=where;
+		array[2*where].loc=2*where;
+		}else if ((array[2*where].getValue().compareTo(array[2*where+1].getValue())<0)&&((array[2*where].getValue().compareTo(array[where].getValue()))<0)) {
+		array[where]=array[2*where];
+		array[2*where]=x;
+		array[where].loc=where;
+		array[2*where].loc=2*where;
+		heapify(array[where].loc);
+		}else if((!((array[2*where].getValue().compareTo(array[2*where+1].getValue()))<0))&&((array[2*where+1].getValue().compareTo(array[where].getValue()))<0)) {
+		array[where]=array[2*where+1];
+		array[2*where+1]=x;
+		array[where].loc=where;
+		array[2*where].loc=2*where;
+		heapify(array[where].loc);
+		}else {
+		return;
+		}
+		}
+		
+			
+		
+	
 	
 	/**
 	 * Does the heap contain anything currently?

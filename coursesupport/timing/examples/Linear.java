@@ -22,7 +22,7 @@ public class Linear extends QuietAlgorithm {
 
 	@Override
 	public void run() {
-		for (int i=0; i < n; ++i) {
+		for (int i=0; i < 1000*n; ++i) {
 			//
 			// Statement below is deemed to take one operation
 			//

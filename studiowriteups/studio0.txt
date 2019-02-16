@@ -4,8 +4,8 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
-2.
+1.Josh Gilberstadt josh.gilberstadt
+2.Asa Kalish       a.kalish
 3.
 4.
 5.
@@ -13,31 +13,61 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question PS1: 
+Question PS1: The time and tick graphs of the quadratic program 
+look like parabolas while the graphs of the linear program look like 
+lines.The linear program has a single loop while the quadratic program has
+a loop inside of a loop, which accounts for the difference in shape
+of their respective graphs.
 
-Question PS2:
+Question PS2: The time required for the linear program to run is
+much smaller than the time required for the quadratic program to run,
+so slight fluctuations in the run time are much more apparent in the
+linear graph than in the quadratic graph.
 	
-Question PS3: 
+Question PS3: The tick graphs all have the same shape while the time
+graphs have very similar shapes. The values of the tick graph with
+the tick added to the inner loop are larger than the original
+graph while the graphs with the tick added the the outer loop and
+top level are the same as the original graph. The values of the time
+graph with the tick added to the outer loop are smaller than
+the original graph while the graphs with the tick added to the inner
+loop and top level are almost the same as the original graph.
 	
-Question PS4: 
+Question PS4: The time and tick curves are proportional to n squared.
 		
-Question PS5: 
+Question PS5: The time graph has the same shape as the original graph
+with smaller values while the tick graph is linear and has smaller
+values than the original graph.
 	
-Question A1:
+Question A1: Both graphs are flat lines. Both graphs are independent
+of n. This is because the amount of time it takes to add a single integer
+is independent of the integer's size.
 	
-Question A2:
+Question A2: The data tell us that the time is proportional to n. The
+provided code does not have a run time independent of n.
 	
-Question A3:
+Question A3: The ticks do not agree in shape because the allocates code
+fills a matrix of size n while the other code simply adds the value n.
 	
-Question A4:
+Question A4: The plots are more similar to each other than before. This
+tells us that the time required for allocation is directly proportional
+to n. It probably takes the same amount of time for each value of the
+array to be filled.
 
-Question A5:
+Question A5: The group using the decimal representation should finish first.
+The tallying group takes x amount of time while the decimal group 
+takes log10(x) + 1 amount of time. The decimal representation starts to 
+require fewer marks when x equals 1.
 
-Question A6:
+Question A6: It should take log2(x) amount of time to write x in binary.
+The ratio of binary marks to decimal marks is log2(x)/log10(x). 
 
-Question A7:
+Question A7: Choosing between the logarithm options and the unary 
+option is more important because the logarithm options are both 
+exponentially faster than the unary option.
 	
-Question C1:
+Question C1: This curve is quadratic. The curve can be represented by
+the equation y = 0.5x^2.
 
 Question C2:
 

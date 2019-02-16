@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt josh.gilberstadt
 2.
 3.
 4.
@@ -15,7 +15,7 @@ Below each question, type in your short, to-the-point answers.
 
 Question A1:
 
-- ProbA
+- ProbA f(n) = n
 
 - ProbB
 

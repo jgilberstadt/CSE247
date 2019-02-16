@@ -13,10 +13,12 @@ public class LinkedListWithTail<T> implements List<T> {
 	
 	private ListNode<T> head;
 	private Ticker ticker;
+	private ListNode<T> tail;
 	
 	public LinkedListWithTail(Ticker ticker) {
 		this.head = null;   // nothing in our list yet
 		this.ticker = ticker;
+		this.tail = null;
 	}
 
 	/**
@@ -30,10 +32,10 @@ public class LinkedListWithTail<T> implements List<T> {
 	 */
 	@Override
 	public void addLast(T thing) {
-		if (head == null) {
+		if (tail == null) {
 			ListNode<T> p = new ListNode<T>();
 			p.value = thing;
-			head = p;
+			tail = p;
 			ticker.tick(3);  // for the 3 statements above
 		}
 		else {
@@ -42,13 +44,13 @@ public class LinkedListWithTail<T> implements List<T> {
 			// search for the end of the list -- modify this
 			// code to use (and maintain) the tail pointer!
 			//
-			ListNode<T> p = head;
+			ListNode<T> p = tail;
 			while (p.next != null) {
-				p = p.next;
+				p = tail.next;
+				tail=tail.next;
 				ticker.tick(2);
 			}
 			ticker.tick(1); // for the last test in the "while" loop
-			
 			p.next = q;
 			ticker.tick(4);  // for the 4 statements not part of the "while" loop
 		}
@@ -63,8 +65,9 @@ public class LinkedListWithTail<T> implements List<T> {
 	public int getSize() {
 		int ans = 0;
 		ticker.tick(2); // init ans; nitialization stmt in for() loop
-		for (ListNode<T> p = this.head; p != null; p = p.next) {
+		for (ListNode<T> p = this.tail; p != null; p = p.next) {
 			ans = ans + 1;
+			tail=tail.next;
 			ticker.tick(3); // for 3 statements per loop iter
 		}
 		ticker.tick(); // for last test in for loop
@@ -88,7 +91,7 @@ public class LinkedListWithTail<T> implements List<T> {
 	
 	public String toString() {
 		String ans = "[ ";
-		for (ListNode<T> p = head; p != null; p = p.next) {
+		for (ListNode<T> p = tail; p != null; p = p.next) {
 			ans = ans + p.value + " ";
 		}
 		ans = ans + "]";
