@@ -128,7 +128,6 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 *    maintained at the root node (index 1 into the array).
 	 */
 	public T extractMin() {
-		T ans = array[1].getValue();
 		//
 		// There is effectively a hole at the root, at location 1 now.
 		//    Fix up the heap as described in lecture.
@@ -137,9 +136,12 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		T ans = array[1].getValue();
 		array[1] = array[size];
 		array[size] = null;
-		heapify(array[1].loc);
+		if (size > 1) {
+		heapify(1);
+		}
 		return ans;
 	}
 
