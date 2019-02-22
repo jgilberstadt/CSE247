@@ -1,0 +1,317 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2019-02-22 09:51:54 -0600
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-16 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 76708c1 Commit
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2019-02-16 00:10
+At hash 96c7fcf62fe892db32b48007027a7b341da829cb
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-students/ key josh.gilberstadt testfilesource test/TestExtractMin package heaps repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestExtractMin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+Running test test.TestExtractMin
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestExtractMin
+    [junit] Testsuite: heaps.test.TestExtractMin
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.208 sec
+    [junit] Output:
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.208 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExtractMinDups took 0.136 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:143)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestExtractMin.testExtractMinDups(TestExtractMin.java:34)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testExtractMinUniq took 0.002 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:143)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestExtractMin.testExtractMinUniq(TestExtractMin.java:22)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedHeapify took 0.024 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:163)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:145)
+    [junit] 	at heaps.test.TestExtractMin.testLocUpdatedHeapify(TestExtractMin.java:57)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+
+BUILD FAILED
+/home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestExtractMin failed
+
+Total time: 1 second
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-23 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 76708c1 Commit
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2019-02-23 00:10
+At hash 76708c1f8cf6622a93b0d46c8871c9fed072cf3c
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-students/ key josh.gilberstadt testfilesource test/TestExtractMin package heaps repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestExtractMin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
+Running test test.TestExtractMin
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestExtractMin
+    [junit] Testsuite: heaps.test.TestExtractMin
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.193 sec
+    [junit] Output:
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.193 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] ===== Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinDups(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] Testing with unique vals size 0
+    [junit] done
+    [junit] Testing with unique vals size 1
+    [junit] ===== Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMinUniq(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
+    [junit] 
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExtractMinDups took 0.128 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:146)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestExtractMin.testExtractMinDups(TestExtractMin.java:34)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testExtractMinUniq took 0.002 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:146)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestExtractMin.testExtractMinUniq(TestExtractMin.java:22)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedHeapify took 0.02 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:167)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:148)
+    [junit] 	at heaps.test.TestExtractMin.testLocUpdatedHeapify(TestExtractMin.java:57)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+
+BUILD FAILED
+/home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestExtractMin failed
+
+Total time: 1 second
+================
+Lab is not counted -- failed unit tests
+================
+
+CSE247 Robot tester ends testing heaps on 2019-02-22 09:52:12 -0600
+-------------------
