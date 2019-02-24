@@ -1,0 +1,760 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2019-02-24 06:21:06 -0600
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-16 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at f10b3f3 robograde
+No local changes to save
+
+Updating f10b3f3..a5e99fb
+Fast-forward
+ RoboGrade/heaps-test.TestExtractMin.txt | 45 ++++++++++++++++++---------------
+ 1 file changed, 24 insertions(+), 21 deletions(-)
+Going back in time to: 2019-02-16 00:10
+At hash 96c7fcf62fe892db32b48007027a7b341da829cb
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-students/ key josh.gilberstadt testfilesource test/TestMinHeap package heaps repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestMinHeap
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test test.TestMinHeap
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestMinHeap
+    [junit] Testsuite: heaps.test.TestMinHeap
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        4       
+    [junit]    25      8   
+    [junit]  35  29  30  23
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                4               
+    [junit]        25              8       
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit]    19      29      30      23  
+    [junit]  35
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1404564
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.176 sec
+    [junit] Output:
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        4       
+    [junit]    25      8   
+    [junit]  35  29  30  23
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                4               
+    [junit]        25              8       
+    [junit]    19      29      30      23  
+    [junit]  35
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1404564
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] 
+    [junit] Error: 
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.176 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        4       
+    [junit]    25      8   
+    [junit]  35  29  30  23
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                4               
+    [junit]        25              8       
+    [junit]    19      29      30      23  
+    [junit]  35
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1404564
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testViaSorting took 0.221 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:143)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestMinHeap.testViaSorting(TestMinHeap.java:98)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testEmptyHeap took 0.039 sec
+    [junit] Testcase: testAndPrint took 0.162 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        4       
+    [junit]    25      8   
+    [junit]  35  29  30  23
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 25>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                4               
+    [junit]        25              8       
+    [junit]    19      29      30      23  
+    [junit]  35
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:43)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testExtractMin took 0.088 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:164)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:145)
+    [junit] 	at heaps.test.TestMinHeap.testExtractMin(TestMinHeap.java:70)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedHeapify took 0.015 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:163)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:145)
+    [junit] 	at heaps.test.TestMinHeap.testLocUpdatedHeapify(TestMinHeap.java:142)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInsert took 0.255 sec
+    [junit] Testcase: testUsingHeapSort took 0.31 sec
+    [junit] 	Caused an ERROR
+    [junit] 1404564
+    [junit] java.lang.ArrayIndexOutOfBoundsException: 1404564
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:163)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:174)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:145)
+    [junit] 	at heaps.HeapSort.run(HeapSort.java:30)
+    [junit] 	at heaps.test.TestMinHeap.testUsingHeapSort(TestMinHeap.java:85)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedDecrease took 0 sec
+
+BUILD FAILED
+/home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestMinHeap failed
+
+Total time: 3 seconds
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-23 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a5e99fb robograde
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2019-02-23 00:10
+At hash 9f35fea3bb95f8bf7ee9d8b82183cf624804da43
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-students/ key josh.gilberstadt testfilesource test/TestMinHeap package heaps repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestMinHeap
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Running test test.TestMinHeap
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestMinHeap
+    [junit] Testsuite: heaps.test.TestMinHeap
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        1       
+    [junit]    33      9   
+    [junit]  36  47  45  10
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                1               
+    [junit]        33              9       
+    [junit]    19      47      45      10  
+    [junit]  36
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1415302
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.463 sec
+    [junit] Output:
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        1       
+    [junit]    33      9   
+    [junit]  36  47  45  10
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                1               
+    [junit]        33              9       
+    [junit]    19      47      45      10  
+    [junit]  36
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1415302
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] 
+    [junit] Error: 
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 1.463 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] ===== Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testViaSorting(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit] ===== Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] Failure message: Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        1       
+    [junit]    33      9   
+    [junit]  36  47  45  10
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                1               
+    [junit]        33              9       
+    [junit]    19      47      45      10  
+    [junit]  36
+    [junit] 
+    [junit] ===== End Failure report for testAndPrint(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testExtractMin(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.NullPointerException
+    [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ===== Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] Failure message: java.lang.ArrayIndexOutOfBoundsException: 1415302
+    [junit] ===== End Failure report for testUsingHeapSort(heaps.test.TestMinHeap) ========
+    [junit] 
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.childrenNoSmallerThanParent(MinHeapValidator.java:84)
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:31)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+    [junit] 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testViaSorting took 0.207 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:146)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:88)
+    [junit] 	at heaps.test.TestMinHeap.testViaSorting(TestMinHeap.java:98)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testEmptyHeap took 0.034 sec
+    [junit] Testcase: testAndPrint took 0.158 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] Heap Validation Error (detail shown below):
+    [junit] java.lang.Error: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree before the problem occurred:
+    [junit]        1       
+    [junit]    33      9   
+    [junit]  36  47  45  10
+    [junit] 
+    [junit] What went wrong: The node at index 2 is larger than its left child: 33>19
+    [junit] 
+    [junit] Tree that triggered this problem:
+    [junit]                1               
+    [junit]        33              9       
+    [junit]    19      47      45      10  
+    [junit]  36
+    [junit] 
+    [junit] 	at heaps.validate.MinHeapValidator.check(MinHeapValidator.java:43)
+    [junit] 	at heaps.test.TestUtil.sortTest(TestUtil.java:71)
+    [junit] 	at heaps.test.TestMinHeap.testAndPrint(TestMinHeap.java:152)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testExtractMin took 0.239 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:169)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:148)
+    [junit] 	at heaps.test.TestMinHeap.testExtractMin(TestMinHeap.java:70)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedHeapify took 0.013 sec
+    [junit] 	Caused an ERROR
+    [junit] null
+    [junit] java.lang.NullPointerException
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:167)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:148)
+    [junit] 	at heaps.test.TestMinHeap.testLocUpdatedHeapify(TestMinHeap.java:142)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInsert took 0.002 sec
+    [junit] Testcase: testUsingHeapSort took 0.71 sec
+    [junit] 	Caused an ERROR
+    [junit] 1415302
+    [junit] java.lang.ArrayIndexOutOfBoundsException: 1415302
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:167)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:187)
+    [junit] 	at heaps.MinHeap.heapify(MinHeap.java:180)
+    [junit] 	at heaps.MinHeap.extractMin(MinHeap.java:148)
+    [junit] 	at heaps.HeapSort.run(HeapSort.java:30)
+    [junit] 	at heaps.test.TestMinHeap.testUsingHeapSort(TestMinHeap.java:85)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testLocUpdatedDecrease took 0 sec
+
+BUILD FAILED
+/home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestMinHeap failed
+
+Total time: 3 seconds
+================
+Lab is not counted -- failed unit tests
+================
+
+CSE247 Robot tester ends testing heaps on 2019-02-24 06:21:37 -0600
+-------------------
