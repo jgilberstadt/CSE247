@@ -1,15 +1,18 @@
 -------------------
-CSE247 Robot tester starts testing heaps on 2019-02-22 09:51:54 -0600
+CSE247 Robot tester starts testing heaps on 2019-02-24 04:04:26 -0600
 
 ========
 Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-16 00:10
 ========
 Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
 Your branch is up-to-date with 'origin/master'.
-HEAD is now at 76708c1 Commit
+HEAD is now at 9f35fea robograde
 No local changes to save
 
-Already up-to-date.
+Updating 9f35fea..f10b3f3
+Fast-forward
+ RoboGrade/heaps-test.TestInsert.txt | 181 +++++++++++-------------------------
+ 1 file changed, 54 insertions(+), 127 deletions(-)
 Going back in time to: 2019-02-16 00:10
 At hash 96c7fcf62fe892db32b48007027a7b341da829cb
 
@@ -30,7 +33,7 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 1 second
+Total time: 3 seconds
 Buildfile: /home/coles/git/cse247-support/build.xml
 
 compile:
@@ -38,7 +41,7 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 Running test test.TestExtractMin
 Buildfile: /home/coles/git/cse247-support/build.xml
 
@@ -66,7 +69,7 @@ test:
     [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
     [junit] 
     [junit] 
-    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.208 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.297 sec
     [junit] Output:
     [junit] Testing with duplicates size 0
     [junit] done
@@ -90,7 +93,7 @@ test:
     [junit] 
     [junit] 
     [junit] 
-    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.208 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.297 sec
     [junit] ------------- Standard Output ---------------
     [junit] Testing with duplicates size 0
     [junit] done
@@ -115,7 +118,7 @@ test:
     [junit] 
     [junit] ------------- ---------------- ---------------
     [junit] 
-    [junit] Testcase: testExtractMinDups took 0.136 sec
+    [junit] Testcase: testExtractMinDups took 0.192 sec
     [junit] 	Caused an ERROR
     [junit] null
     [junit] java.lang.NullPointerException
@@ -137,7 +140,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testLocUpdatedHeapify took 0.024 sec
+    [junit] Testcase: testLocUpdatedHeapify took 0.035 sec
     [junit] 	Caused an ERROR
     [junit] null
     [junit] java.lang.NullPointerException
@@ -154,18 +157,18 @@ test:
 BUILD FAILED
 /home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestExtractMin failed
 
-Total time: 1 second
+Total time: 2 seconds
 ========
 Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: heaps as of 2019-02-23 00:10
 ========
 Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
 Your branch is up-to-date with 'origin/master'.
-HEAD is now at 76708c1 Commit
+HEAD is now at f10b3f3 robograde
 No local changes to save
 
 Already up-to-date.
 Going back in time to: 2019-02-23 00:10
-At hash 76708c1f8cf6622a93b0d46c8871c9fed072cf3c
+At hash 9f35fea3bb95f8bf7ee9d8b82183cf624804da43
 
 Buildfile: /home/coles/git/cse247-support/build.xml
 
@@ -184,7 +187,7 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 1 second
+Total time: 4 seconds
 Buildfile: /home/coles/git/cse247-support/build.xml
 
 compile:
@@ -192,7 +195,7 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 Running test test.TestExtractMin
 Buildfile: /home/coles/git/cse247-support/build.xml
 
@@ -220,7 +223,7 @@ test:
     [junit] ===== End Failure report for testLocUpdatedHeapify(heaps.test.TestExtractMin) ========
     [junit] 
     [junit] 
-    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.193 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.316 sec
     [junit] Output:
     [junit] Testing with duplicates size 0
     [junit] done
@@ -244,7 +247,7 @@ test:
     [junit] 
     [junit] 
     [junit] 
-    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.193 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.316 sec
     [junit] ------------- Standard Output ---------------
     [junit] Testing with duplicates size 0
     [junit] done
@@ -269,7 +272,7 @@ test:
     [junit] 
     [junit] ------------- ---------------- ---------------
     [junit] 
-    [junit] Testcase: testExtractMinDups took 0.128 sec
+    [junit] Testcase: testExtractMinDups took 0.208 sec
     [junit] 	Caused an ERROR
     [junit] null
     [junit] java.lang.NullPointerException
@@ -280,7 +283,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testExtractMinUniq took 0.002 sec
+    [junit] Testcase: testExtractMinUniq took 0.005 sec
     [junit] 	Caused an ERROR
     [junit] null
     [junit] java.lang.NullPointerException
@@ -291,7 +294,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testLocUpdatedHeapify took 0.02 sec
+    [junit] Testcase: testLocUpdatedHeapify took 0.03 sec
     [junit] 	Caused an ERROR
     [junit] null
     [junit] java.lang.NullPointerException
@@ -308,10 +311,10 @@ test:
 BUILD FAILED
 /home/coles/git/cse247-support/build.xml:34: Test heaps.test.TestExtractMin failed
 
-Total time: 1 second
+Total time: 2 seconds
 ================
 Lab is not counted -- failed unit tests
 ================
 
-CSE247 Robot tester ends testing heaps on 2019-02-22 09:52:12 -0600
+CSE247 Robot tester ends testing heaps on 2019-02-24 04:04:52 -0600
 -------------------
