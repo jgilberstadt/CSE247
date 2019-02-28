@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt josh.gilberstadt
 2.
 3.
 4.
@@ -13,15 +13,32 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: if ((A[i] < B[j])||((i<A.size)&&!(j<B.size))){
+c[k] = A[i]
+i = i+1
+k=k+1
+}else if (!(A[i] < B[j])||(!(i<A.size)&&(j<B.size)))({
+c[k] = B[j]
+j = j+1
+k=k+1
+}
 
 Question A2:
 
-Question A3:
+Question A3: if (i+j > n){
+end
+}
 
-Question A4:
+Question A4: n > 0, so i+j<=n when i=j=0
+if i+j <= n then (i+1) + j <= (n+1) so i + j <= n. 
+same with j. if i+j=n then 
+(i+1) + j = i+j+1>n so i + j !<= n (same for j)
 
-Question A5:
+Question A5: If the program ends when i+j>n
+then C will have exactly n elements when it ends
+because i and j increment by 1. Since C is filled
+in increasing order, C must contain all the
+elements of A and B in a sorted order.
 
 Question B1:
 
