@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt josh.gilberstadt
 2.
 3.
 4.
@@ -13,41 +13,78 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: f(n) is larger than n^log2(3), so
+T(n) = n^2
 
-Question A2:
+Question A2: f(n) = Theta n^log2(4), so 
+T(n) = Theta n^2logn
 
-Question A3:
+Question A3: f(n) is larger than n^log2(1), so
+T(n) = Theta 2^n
 
-Question A4:
+Question A4: f(n) is smaller than n^log4(16), so
+T(n) = Theta n^2
 
-Question A5:
+Question A5: f(n) = Theta n^log2(2), so
+T(n) = Theta nlog^2(n)
 
-Question A6:
+Question A6: f(n) = Theta n^log2(2), so
+T(n) = Theta nlog^3(n)
 
-Question A7:
+Question A7: f(n) = Theta n^log2(2), so
+T(n) = Theta n=log(log(n))
 
-Question A8:
+Question A8: f(n) is larger than n^log4(16), so
+T(n) = Theta n!
 
-Question A9:
+Question A9: f(n) = Theta n^log2(3), so
+T(n) = Theta n^log2(3)logn
 
-Question A10:
+Question A10: f(n) = Theta n^log3(3), so 
+T(n) = Theta nlogn
 
-Question A11:
+Question A11: f(n) is smaller than n^log3(3), so
+T(n) = Theta n
 
-Question A12:
+Question A12: f(n) is larger than n^log4(3), so
+T(n) = Theta nlogn
 
-Question A13:
+Question A13: This question cannot be solved with
+the Master Theorem because f(n) is in the form 
+nlog(log(n)), which cannot be solved with the
+Master Theorem
 
-Question A14:
+Question A14: This question cannot be solved with
+the Master Theorem because f(n) is negative, which
+doens't make sense in the context of this problem.
 
-Question A15:
+Question A15: f(n) is larger than n^log3(7), so
+T(n) = n^2
 
-Question B1:
+Question B1: The algorithm ends when the value x
+is located instead of analyzing the entire array.
 
-Question B2:
+Question B2: After iteration 0, The range of
+possible values is H - L. After the first 
+iteration, the range becomes (H-L)/2.
+After the nth iteration, the range is (H-L)/2^n.
+Because H-L is a constant, the value (H-L)/2^n
+will eventually be equal to 1, meaning that all
+individual values of the array are capable of
+being identified. If x is in the subarray then
+it will eventually be found by the algorithm,
+so it exists. If x exists then it must be in the
+subarray, so must be found after log2(H-L)
+iterations of the while loop.
 
-Question B3:
+
+
+Question B3: The code does not work when x is in
+the 0th position of the array. After enough while
+loops, the values L and H will eventually both
+equal x and will thus equal each other. This will
+cause the while loop to stop because L will no
+longer be less than H
 
 Question B4:
 
