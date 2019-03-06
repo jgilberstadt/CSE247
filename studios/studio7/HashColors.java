@@ -1,4 +1,4 @@
-package studio8;
+package studio7;
 
 import java.awt.Color;
 import java.io.File;
