@@ -39,7 +39,7 @@ public class HashColors {
 		// Write out the hash values of a bunch of random colors
 		//
 		
-		File all = new File("outputs/studio8randomcolors.csv");
+		File all = new File("outputs/studio7randomcolors.csv");
 
 		FileWriter fw = new FileWriter(all, false);
 		CsvWriter w = new CsvWriter(fw, ',');
@@ -58,7 +58,7 @@ public class HashColors {
 		// Write out the hash values of the colors in the
 		// image shown in the studio document.
 		//
-		all = new File("outputs/studio8paintingcolors.csv");
+		all = new File("outputs/studio7paintingcolors.csv");
 
 		fw = new FileWriter(all, false);
 		w = new CsvWriter(fw, ',');
