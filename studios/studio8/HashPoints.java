@@ -28,7 +28,15 @@ public class HashPoints {
 		pointSet.add(p6);
 
 		System.out.println("pointSet has " + pointSet.size() + " elements in it.");
-		System.out.println(pointSet);
+		System.out.println(pointSet);		
 	}
-
+	public String hashCode(int a, int b, int c, int d) {
+	if ((a==b)&&(c==d)) {
+	return "Integer.parseInt(a+c)";
+	}else {
+	return "Integer.parseInt(a+c)" + " and " + "Integer.parseInt(b+d)";
+	}
+	}
 }
+
+

@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt	josh.gilberstadt
 2.
 3.
 4.
@@ -13,19 +13,24 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: PointHash does not display the
+integers associated with the points.
 
-Question A2:
+Question A2: 
 
-Question A3:
+Question A3: The points map to the sum of their values.
 
-Question A4:
+Question A4: (1,3) and (2,2) map to the same hashcode.
 
-Question A5:
+Question A5: The simplest hash function maps all points
+to a single value. This function is not ideal because
+it is impossible to distinguish between different points.
 
-Question B1:
+Question B1: The number of bits needed to represent a
+color object is 2^32+2^24+2^16+2^8
 
-Question B2:
+Question B2: No two distinct colors map to the same hashcode.
+Not all hashcodes are realizable.
 
 Question B3:
 
