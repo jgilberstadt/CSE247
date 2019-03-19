@@ -1,4 +1,4 @@
-package studio8;
+package studio7;
 
 public class Point {
 
