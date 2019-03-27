@@ -46,14 +46,15 @@ public class StringTable {
     	// TODO - implement this method
     	int n = 0;
     	for (int i = 0; i < size; i++) {
-    	if (r.equals(obj)){
+    	if (r.equals()){
     	n=n+1;
     	}
     	}
     		if (n>0) {
     	return false;
     }else {
-    	return true;
+   .add(r);
+    return true;
     }
     }
     
