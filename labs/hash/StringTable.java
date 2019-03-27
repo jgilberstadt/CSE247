@@ -1,6 +1,7 @@
 package hash;
 
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 //
@@ -66,7 +67,11 @@ public class StringTable {
     public Record find(String key) 
     {
     	// TODO - implement this method
-	
+	Iterator itr = nBuckets.iterator;
+    	for (int i = 0; i < size; i++) {
+		
+	}
+    
     	return null;
     }
     
@@ -79,7 +84,11 @@ public class StringTable {
      */
     public void remove(String key) 
     {
-    	
+    	for (int i = 0; i < size; i++) {
+    	if (key==){
+    	.remove(key);
+    }
+    	}
     	// TODO - implement this method
     }
     
