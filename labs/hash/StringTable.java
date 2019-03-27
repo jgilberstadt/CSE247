@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.Hashtable;
 import java.util.LinkedList;
 
 //
@@ -27,7 +28,7 @@ public class StringTable {
     {
     	this.nBuckets = nBuckets;
     	buckets = new LinkedList[nBuckets];
-	
+    	
     	// TODO - fill in the rest of this method to initialize your table
     }
     
@@ -42,8 +43,17 @@ public class StringTable {
     public boolean insert(Record r) 
     {  
     	// TODO - implement this method
-	
+    	int n = 0;
+    	for (int i = 0; i < size; i++) {
+    	if (r.equals(obj)){
+    	n=n+1;
+    	}
+    	}
+    		if (n>0) {
     	return false;
+    }else {
+    	return true;
+    }
     }
     
     
@@ -69,6 +79,7 @@ public class StringTable {
      */
     public void remove(String key) 
     {
+    	
     	// TODO - implement this method
     }
     
@@ -89,8 +100,9 @@ public class StringTable {
     private int toIndex(int hashcode)
     {
     	// Fill in your own hash function here
-	
-    	return 0;
+	double A = (Math.sqrt(5) - 1)/2;
+    	return (int) Math.floor(((hashcode*A)%1.0)*size);
+    	
     }
     
     
