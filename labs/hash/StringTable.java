@@ -3,6 +3,7 @@ package hash;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 //
 // STRINGTABLE.JAVA
@@ -29,7 +30,9 @@ public class StringTable {
     {
     	this.nBuckets = nBuckets;
     	buckets = new LinkedList[nBuckets];
-    	
+    	for (int i = 0; i < nBuckets; i++) {
+    	buckets[i]= new LinkedList<Record>();
+    	}
     	// TODO - fill in the rest of this method to initialize your table
     }
     
@@ -44,19 +47,20 @@ public class StringTable {
     public boolean insert(Record r) 
     {  
     	// TODO - implement this method
-    	int n = 0;
-    	for (int i = 0; i < size; i++) {
-    	if (r.equals()){
-    	n=n+1;
-    	}
-    	}
-    		if (n>0) {
+    	String Locations = r.key;
+    	int Locationi = stringToHashCode(Locations);
+    	int Index = toIndex(Locationi);
+    	LinkedList<Record> Listplace = buckets[Index];
+    	for (Record s : Listplace) {
+    	if (Locations.equals(s.key)) {
     	return false;
-    }else {
-   .add(r);
-    return true;
+    	}
+    	}
+    	size++;
+    	return true;
+    
     }
-    }
+    
     
     
     /**
@@ -68,11 +72,14 @@ public class StringTable {
     public Record find(String key) 
     {
     	// TODO - implement this method
-	Iterator itr = nBuckets.iterator;
-    	for (int i = 0; i < size; i++) {
-		
+    	int Hashcode = stringToHashCode(key);
+    	int Indexloc = toIndex(Hashcode);
+    	LinkedList<Record> Listloc = buckets[Indexloc];
+    	for (Record s : Listloc) {
+    	if (key.equals(s.key)) {
+    	return s;
+    	}
 	}
-    
     	return null;
     }
     
@@ -85,9 +92,13 @@ public class StringTable {
      */
     public void remove(String key) 
     {
-    	for (int i = 0; i < size; i++) {
-    	if (key==){
-    	.remove(key);
+    	int Hash = stringToHashCode(key);
+    	int Hindex = toIndex(Hash);
+    	LinkedList<Record> Place = buckets[Hindex];
+    	for (Record s : Place) {
+    	if (key.equals(s.key)){
+    	Place.remove(s);
+    	size--;
     }
     	}
     	// TODO - implement this method
