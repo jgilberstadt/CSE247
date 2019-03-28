@@ -49,7 +49,7 @@ public class StringTable {
     	// TODO - implement this method
     	String Locations = r.key;
     	int Locationi = stringToHashCode(Locations);
-    	int Index = toIndex(Locationi);
+    	int Index = toIndex(Math.abs(Locationi));
     	LinkedList<Record> Listplace = buckets[Index];
     	for (Record s : Listplace) {
     	if (Locations.equals(s.key)) {
@@ -73,7 +73,7 @@ public class StringTable {
     {
     	// TODO - implement this method
     	int Hashcode = stringToHashCode(key);
-    	int Indexloc = toIndex(Hashcode);
+    	int Indexloc = toIndex(Math.abs(Hashcode));
     	LinkedList<Record> Listloc = buckets[Indexloc];
     	for (Record s : Listloc) {
     	if (key.equals(s.key)) {
@@ -93,7 +93,7 @@ public class StringTable {
     public void remove(String key) 
     {
     	int Hash = stringToHashCode(key);
-    	int Hindex = toIndex(Hash);
+    	int Hindex = toIndex(Math.abs(Hash));
     	LinkedList<Record> Place = buckets[Hindex];
     	for (Record s : Place) {
     	if (key.equals(s.key)){
@@ -122,7 +122,7 @@ public class StringTable {
     {
     	// Fill in your own hash function here
 	double A = (Math.sqrt(5) - 1)/2;
-    	return (int) Math.floor(((hashcode*A)%1.0)*size);
+    	return (int) Math.floor(((Math.abs(hashcode)*A)%1.0)*size);
     	
     }
     
