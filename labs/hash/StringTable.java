@@ -33,6 +33,7 @@ public class StringTable {
     	for (int i = 0; i < nBuckets; i++) {
     	buckets[i]= new LinkedList<Record>();
     	}
+    	size = 0;
     	// TODO - fill in the rest of this method to initialize your table
     }
     
@@ -48,16 +49,22 @@ public class StringTable {
     {  
     	// TODO - implement this method
     	String Locations = r.key;
+    	boolean ri = true;
     	int Locationi = stringToHashCode(Locations);
     	int Index = toIndex(Math.abs(Locationi));
     	LinkedList<Record> Listplace = buckets[Index];
-    	for (Record s : Listplace) {
-    	if (Locations.equals(s.key)) {
-    	return false;
+   
+    	if (find(r.key) != null) {
+    		
+    	ri = false;
     	}
-    	}
+    	else{
+    		Listplace.addLast(r);
+    		ri = true;
     	size++;
-    	return true;
+    	}
+    	
+    	return ri;
     
     }
     
@@ -95,14 +102,14 @@ public class StringTable {
     	int Hash = stringToHashCode(key);
     	int Hindex = toIndex(Math.abs(Hash));
     	LinkedList<Record> Place = buckets[Hindex];
-    	for (Record s : Place) {
-    	if (key.equals(s.key)){
-    	Place.remove(s);
+    	Record deleted = find(key);
+    	if (deleted != null ) {
+    	Place.remove(deleted);
     	size--;
     }
     	}
     	// TODO - implement this method
-    }
+    
     
 
     /**
@@ -122,7 +129,9 @@ public class StringTable {
     {
     	// Fill in your own hash function here
 	double A = (Math.sqrt(5) - 1)/2;
-    	return (int) Math.floor(((Math.abs(hashcode)*A)%1.0)*size);
+	int re = (int) (((Math.abs(hashcode)*A)%1.0)*nBuckets);
+    	//System.out.println(re);
+    	return re;
     	
     }
     

@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt  josh.gilberstadt
 2.
 3.
 4.
@@ -13,21 +13,41 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1:					10
+						4				  15
+				3			8		12			16
+			1			  5	  9	 11     13    		17
+succ(10) has just 10 while succ(9) has 10, 4, 8 and 9
 
-Question A2:
+Question A3: 3 an 17 only remove a single value and don't
+alter the shape of the tree. 4 causes 8 to move to 4
+and 9 to move to 8. 10 causes 13 to move to 10, 16 to move
+to 13 and 17 to move to 16
 
-Question A3:
+Question B1: The values could be inserted in increasing
+or decreasing order.
 
-Question B1:
+Question B2: This property holds for having 1 or 2 nodes.
+The tree's sides might differ by 0 or 1 so it's 
+important to establish a base case for both scenarios.
+establish a base case
 
-Question B2:
+Question B3: The sizes can be at most 1 apart.
+The sizes are between 2^(h-1)-1 and (2^h)-1 of 
+where h is the height.
 
-Question B3:
+Question B4: The size is at most 
+2[(2^h)-1]+1=2^(h+1)-1 = n. The total height is then
+h+1=log(n+1). When n is not 1 less than a power of 2, the
+total height equals log(n)-1. When n is 1 less than
+a power of 2, the total height equals log(n)+1-1=log(n).
+The height is greatest when n is 1 less than a power of 2
+at which point it equals log(n).
 
-Question B4:
-
-Question B5:
+Question B5: This claim is if-and-only-if because
+all n values can be either 1 less than a power of 2
+or not 1 less than a power of 2, which are encompassed by
+the conditions listed above.
 
 Question B6:
 
