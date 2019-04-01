@@ -1,0 +1,343 @@
+-------------------
+CSE247 Robot tester starts testing hash on 2019-04-01 04:36:48 -0500
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: hash as of 2019-03-23 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at a5e99fb robograde
+No local changes to save
+
+Updating a5e99fb..53aa277
+Fast-forward
+ RoboGrade/heaps-test.TestMinHeap.txt         |  760 ++++
+ labs/hash/SeqReader.java                     |   31 +-
+ labs/hash/StringTable.java                   |   56 +-
+ labs/hash/output/case1-observed.txt          |   14 +
+ labs/hash/output/case2-observed.txt          |   48 +
+ labs/hash/output/case3-observed.txt          |   25 +
+ labs/hash/output/case4-observed.txt          |   42 +
+ labs/hash/test/TestStringTableBasic.java     |  157 +
+ labs/hash/test/TestStringTableFast.java      |  304 ++
+ outputs/studio8paintingcolors.csv            | 5443 ++++++++++++++++++++++++++
+ outputs/studio8randomcolors.csv              | 5001 +++++++++++++++++++++++
+ studios/{studio8 => studio7}/HashColors.java |    6 +-
+ studios/{studio8 => studio7}/HashPoints.java |   14 +-
+ studios/{studio8 => studio7}/Point.java      |    2 +-
+ studiowriteups/studio10.txt                  |   52 +-
+ studiowriteups/studio5.txt                   |   75 +-
+ studiowriteups/studio6.txt                   |   27 +-
+ studiowriteups/studio8.txt                   |   21 +-
+ 18 files changed, 12008 insertions(+), 70 deletions(-)
+ create mode 100644 RoboGrade/heaps-test.TestMinHeap.txt
+ create mode 100644 labs/hash/output/case1-observed.txt
+ create mode 100644 labs/hash/output/case2-observed.txt
+ create mode 100644 labs/hash/output/case3-observed.txt
+ create mode 100644 labs/hash/output/case4-observed.txt
+ create mode 100644 labs/hash/test/TestStringTableBasic.java
+ create mode 100644 labs/hash/test/TestStringTableFast.java
+ create mode 100644 outputs/studio8paintingcolors.csv
+ create mode 100644 outputs/studio8randomcolors.csv
+ rename studios/{studio8 => studio7}/HashColors.java (97%)
+ rename studios/{studio8 => studio7}/HashPoints.java (70%)
+ rename studios/{studio8 => studio7}/Point.java (91%)
+Going back in time to: 2019-03-23 00:10
+At hash b21cd75fc3b88c7bdde780f86e2c5b169b09e481
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-tas/ key josh.gilberstadt testfilesource test/TestStringTableFast package hash repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash/test
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-tas/ key josh.gilberstadt testfilesource SeqReader package hash repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/StringTable
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/test/TestStringTableFast
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Note: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash/Main.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Running test test.TestStringTableFast
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running hash.test.TestStringTableFast
+    [junit] Testsuite: hash.test.TestStringTableFast
+    [junit] Testing DNA test case 1
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
+    [junit] Testing DNA test case 2
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
+    [junit] Testing DNA test case 3
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
+    [junit] Testing DNA test case 4
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
+    [junit] Tests run: 9, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 3.248 sec
+    [junit] Output:
+    [junit] Testing DNA test case 1
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
+    [junit] Testing DNA test case 2
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
+    [junit] Testing DNA test case 3
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
+    [junit] Testing DNA test case 4
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
+    [junit] 
+    [junit] Tests run: 9, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 3.248 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing DNA test case 1
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
+    [junit] Testing DNA test case 2
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
+    [junit] Testing DNA test case 3
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
+    [junit] Testing DNA test case 4
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testDNA1 took 1.686 sec
+    [junit] 	FAILED
+    [junit] The observed output for case1 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case1 differs from the expected output.
+    [junit] 	at hash.test.TestStringTableFast.testWithDNA(TestStringTableFast.java:247)
+    [junit] 	at hash.test.TestStringTableFast.testDNA1(TestStringTableFast.java:204)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testDNA2 took 0.155 sec
+    [junit] 	FAILED
+    [junit] The observed output for case2 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case2 differs from the expected output.
+    [junit] 	at hash.test.TestStringTableFast.testWithDNA(TestStringTableFast.java:247)
+    [junit] 	at hash.test.TestStringTableFast.testDNA2(TestStringTableFast.java:210)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testDNA3 took 0.769 sec
+    [junit] 	FAILED
+    [junit] The observed output for case3 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case3 differs from the expected output.
+    [junit] 	at hash.test.TestStringTableFast.testWithDNA(TestStringTableFast.java:247)
+    [junit] 	at hash.test.TestStringTableFast.testDNA3(TestStringTableFast.java:216)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testDNA4 took 0.484 sec
+    [junit] 	FAILED
+    [junit] The observed output for case4 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case4 differs from the expected output.
+    [junit] 	at hash.test.TestStringTableFast.testWithDNA(TestStringTableFast.java:247)
+    [junit] 	at hash.test.TestStringTableFast.testDNA4(TestStringTableFast.java:222)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testFind took 0.017 sec
+    [junit] 	FAILED
+    [junit] Could not find previously inserted record with stringabcdefg
+    [junit] junit.framework.AssertionFailedError: Could not find previously inserted record with stringabcdefg
+    [junit] 	at hash.test.TestStringTableFast.testFind(TestStringTableFast.java:106)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.001 sec
+    [junit] 	FAILED
+    [junit] Table size after deletions should be 8 expected:<0> but was:<8>
+    [junit] junit.framework.AssertionFailedError: Table size after deletions should be 8 expected:<0> but was:<8>
+    [junit] 	at hash.test.TestStringTableFast.testDelete(TestStringTableFast.java:146)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testZeroHash took 0.002 sec
+    [junit] 	FAILED
+    [junit] All of your hash values return a hashcode of 0
+    [junit] junit.framework.AssertionFailedError: All of your hash values return a hashcode of 0
+    [junit] 	at hash.test.TestStringTableFast.testZeroHash(TestStringTableFast.java:184)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInsert took 0.004 sec
+    [junit] 	FAILED
+    [junit] Could not insert record with key abcdefg into table
+    [junit] junit.framework.AssertionFailedError: Could not insert record with key abcdefg into table
+    [junit] 	at hash.test.TestStringTableFast.testInsert(TestStringTableFast.java:73)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+
+BUILD FAILED
+/home/coles/git/cse247-support/build.xml:34: Test hash.test.TestStringTableFast failed
+
+Total time: 5 seconds
+
+========
+Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: hash as of 2019-03-30 00:10
+========
+Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at 53aa277 Merge branch 'master' of ssh://bitbucket.org/cse247-s19/cse247-s19-students
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2019-03-30 00:10
+At hash 857cf6e2507c2d00d64da6b32c2c4e83549ce3ea
+
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-tas/ key josh.gilberstadt testfilesource test/TestStringTableFast package hash repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash/test
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /home/coles/git/cse247-s19-tas/ key josh.gilberstadt testfilesource SeqReader package hash repo ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt
+     [copy] Copying 1 file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash
+
+BUILD SUCCESSFUL
+Total time: 1 second
+Compiling the code
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/StringTable
+    [mkdir] Created dir: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/test/TestStringTableFast
+    [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
+    [javac] Note: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/labs/hash/Main.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Running test test.TestStringTableFast
+Buildfile: /home/coles/git/cse247-support/build.xml
+
+test:
+    [junit] Running hash.test.TestStringTableFast
+    [junit] Testsuite: hash.test.TestStringTableFast
+    [junit] Testing DNA test case 1
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.124 sec
+    [junit] Output:
+    [junit] Testing DNA test case 1
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] 
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.124 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing DNA test case 1
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testDNA1 took 1.569 sec
+    [junit] Testcase: testDNA2 took 0.153 sec
+    [junit] Testcase: testDNA3 took 1.308 sec
+    [junit] Testcase: testDNA4 took 1.942 sec
+    [junit] Testcase: testFind took 0.063 sec
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.01 sec
+    [junit] Testcase: testZeroHash took 0.003 sec
+    [junit] Testcase: testInsert took 0.007 sec
+
+BUILD SUCCESSFUL
+Total time: 7 seconds
+
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing hash on 2019-04-01 04:37:32 -0500
+-------------------
