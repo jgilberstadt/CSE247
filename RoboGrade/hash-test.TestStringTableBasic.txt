@@ -1,19 +1,19 @@
 -------------------
-CSE247 Robot tester starts testing hash on 2019-04-01 09:12:20 -0500
+CSE247 Robot tester starts testing hash on 2019-04-01 11:03:14 -0500
 
 ========
 Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: hash as of 2019-03-23 00:10
 ========
 Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
 Your branch is up-to-date with 'origin/master'.
-HEAD is now at 53aa277 Merge branch 'master' of ssh://bitbucket.org/cse247-s19/cse247-s19-students
+HEAD is now at 0df9ae5 robograde
 No local changes to save
 
-Updating 53aa277..0df9ae5
+Updating 0df9ae5..92757ce
 Fast-forward
- RoboGrade/hash-test.TestStringTableFast.txt | 343 ++++++++++++++++++++++++++++
- 1 file changed, 343 insertions(+)
- create mode 100644 RoboGrade/hash-test.TestStringTableFast.txt
+ RoboGrade/hash-test.TestStringTableBasic.txt | 175 +++++++++++++++++++++++++++
+ 1 file changed, 175 insertions(+)
+ create mode 100644 RoboGrade/hash-test.TestStringTableBasic.txt
 Going back in time to: 2019-03-23 00:10
 At hash b21cd75fc3b88c7bdde780f86e2c5b169b09e481
 
@@ -57,10 +57,10 @@ Buildfile: /home/coles/git/cse247-support/build.xml
 test:
     [junit] Running hash.test.TestStringTableBasic
     [junit] Testsuite: hash.test.TestStringTableBasic
-    [junit] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.238 sec
-    [junit] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.238 sec
+    [junit] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.249 sec
+    [junit] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.249 sec
     [junit] 
-    [junit] Testcase: testFind took 0.065 sec
+    [junit] Testcase: testFind took 0.079 sec
     [junit] 	FAILED
     [junit] Could not find previously inserted record with stringabcdefg
     [junit] junit.framework.AssertionFailedError: Could not find previously inserted record with stringabcdefg
@@ -69,8 +69,8 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testInit took 0.001 sec
-    [junit] Testcase: testDelete took 0.028 sec
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.025 sec
     [junit] 	FAILED
     [junit] Table size after deletions should be 8 expected:<0> but was:<8>
     [junit] junit.framework.AssertionFailedError: Table size after deletions should be 8 expected:<0> but was:<8>
@@ -79,7 +79,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testZeroHash took 0.01 sec
+    [junit] Testcase: testZeroHash took 0.011 sec
     [junit] 	FAILED
     [junit] All of your hash values return a hashcode of 0
     [junit] junit.framework.AssertionFailedError: All of your hash values return a hashcode of 0
@@ -108,7 +108,7 @@ Testing in ./GradingRepos/repos/cse247-s19-students-josh.gilberstadt: hash as of
 ========
 Now in: /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt
 Your branch is up-to-date with 'origin/master'.
-HEAD is now at 0df9ae5 robograde
+HEAD is now at 92757ce robograde
 No local changes to save
 
 Already up-to-date.
@@ -140,7 +140,7 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 4 seconds
 Buildfile: /home/coles/git/cse247-support/build.xml
 
 compile:
@@ -148,21 +148,21 @@ compile:
     [javac] Compiling 1 source file to /home/coles/git/cse247-support/GradingRepos/repos/cse247-s19-students-josh.gilberstadt/bin
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 4 seconds
 Running test test.TestStringTableBasic
 Buildfile: /home/coles/git/cse247-support/build.xml
 
 test:
     [junit] Running hash.test.TestStringTableBasic
     [junit] Testsuite: hash.test.TestStringTableBasic
-    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.362 sec
-    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.362 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.26 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.26 sec
     [junit] 
-    [junit] Testcase: testFind took 0.225 sec
-    [junit] Testcase: testInit took 0 sec
-    [junit] Testcase: testDelete took 0.026 sec
-    [junit] Testcase: testZeroHash took 0.015 sec
-    [junit] Testcase: testInsert took 0.011 sec
+    [junit] Testcase: testFind took 0.146 sec
+    [junit] Testcase: testInit took 0.001 sec
+    [junit] Testcase: testDelete took 0.023 sec
+    [junit] Testcase: testZeroHash took 0.01 sec
+    [junit] Testcase: testInsert took 0.004 sec
 
 BUILD SUCCESSFUL
 Total time: 2 seconds
@@ -171,5 +171,5 @@ Total time: 2 seconds
 Lab is counted as working
 ================
 
-CSE247 Robot tester ends testing hash on 2019-04-01 09:12:56 -0500
+CSE247 Robot tester ends testing hash on 2019-04-01 11:03:51 -0500
 -------------------
