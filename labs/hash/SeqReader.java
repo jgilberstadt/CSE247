@@ -5,7 +5,11 @@ package hash;
 // Read a sequence from a file.  The file is assumed to contain a single
 // sequence, possibly split across multiple lines.  Case is not preserved.
 //
+
 import java.io.*;
+import java.net.*;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class SeqReader {
     public static String readSeq(String fileName)
@@ -18,15 +22,26 @@ public class SeqReader {
 	    //
 	    // Create a reader for the file
 	    //
-	    try {
-		InputStream is = new FileInputStream(fileName);
+		URL url;
+		HttpsURLConnection connection;
+		try {
+			url = new URL(fileName);
+			connection = (HttpsURLConnection)url.openConnection();
+		} catch (MalformedURLException e1) {
+			e1.printStackTrace();
+			break parsing;
+		} catch (Exception e) {
+			e.printStackTrace();
+			break parsing;
+		}
+		InputStream is;
+		try {
+			is = connection.getInputStream();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+			break parsing;
+		}
 		r = new BufferedReader(new InputStreamReader(is));
-	    }
-	    catch (IOException e) {
-		System.out.println("IOException while opening " +
-				   fileName + "\n" + e);
-		break parsing;
-	    }
 	    
 	    // Accumulate each line of the file (minus surrounding
 	    // whitespace) sequentially in a string buffer.  Convert
