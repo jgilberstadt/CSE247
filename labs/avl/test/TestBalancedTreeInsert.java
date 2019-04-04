@@ -18,7 +18,7 @@ import avl.validate.BSTValidator;
  * @author Fernando Rojo
  *
  */
-public class TestBalancedTree {
+public class TestBalancedTreeInsert {
 
 	@Rule
 	public FailReporter tvs = new FailReporter();
@@ -141,62 +141,6 @@ public class TestBalancedTree {
 		}
 		// uncomment following line to print tree
 		// System.out.println(TreeToStrings.toTree(tree));
-	}
-
-	@Test
-	public void testRemoveSmall() {
-		BSTValidator<Integer> bstv = genTree();
-		AVLTree<Integer> tree = bstv.tree;
-		int num = 15;
-
-		for (int i=0; i < num; ++i) {
-			verifySize("before Insert", tree, i);
-			bstv.check();
-			tree.insert(i);
-			bstv.check();
-			verifySize("after Insert", tree, i+1);
-		}
-
-		for (int i=0; i < num/2; ++i) {
-			verifySize("before Remove", tree, num - i);
-			bstv.check();
-			tree.remove((i + 7) % num);
-			bstv.check();
-			verifySize("after Remove", tree, num - i - 1);
-		}
-
-		for (int i=0; i < num; ++i) {
-			bstv.check();
-			tree.insert(i);
-			bstv.check();
-		}
-		verifySize("after Remove", tree, num);
-
-		// uncomment following line to print tree
-		// System.out.println(TreeToStrings.toTree(tree));
-	}
-
-	@Test
-	public void testRemoveLarge() {
-		BSTValidator<Integer> bstv = genTree();
-		AVLTree<Integer> tree = bstv.tree;
-		int num = 200000;
-
-		for (int i=0; i < num; ++i) {
-			tree.insert(i);
-		}
-		bstv.check();
-
-		for (int i=0; i < num/2; ++i) {
-			tree.remove((i + 7) % num);
-		}
-		bstv.check();
-
-		for (int i=0; i < num; ++i) {
-			tree.insert(i);
-		}
-		bstv.check();
-		verifySize("after Remove", tree, num);
 	}
 
 	private void verifySize(String event, AVLTree<?> tree, int expectedSize) {
