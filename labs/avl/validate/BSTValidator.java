@@ -14,11 +14,11 @@ public class BSTValidator<T extends Comparable<T>> {
     }
 
     /**
-     * The instance variable "before" captures the state of the heap
+     * The instance variable "before" captures the state of the tree
      * last time we looked.   This method runs our validation methods,
      * and if something goes wrong, it reports the before tree, the error,
      * and the after tree.  This should provide enough information to
-     * diagnose your problems with your binary heap implementation.
+     * diagnose your problems with your binary tree implementation.
      */
     public void check() {
         try {
