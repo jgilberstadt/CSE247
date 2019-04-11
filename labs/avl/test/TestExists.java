@@ -7,14 +7,16 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import avl.AVLTree;
 import avl.util.TreeToStrings;
 import avl.validate.BSTValidationError;
 import avl.validate.BSTValidator;
 
-public class TestInsertExists {
+public class TestExists {
 	@Rule
 	public FailReporter tvs = new FailReporter();
 
@@ -42,13 +44,11 @@ public class TestInsertExists {
 			}
 			try {
 				if(missing.size()>0) {
-					throw new BSTValidationError("After inserting "+ values[i] + " your tree is missing " + Arrays.toString(missing.toArray()));
+					throw new BSTValidationError("\nAfter inserting "+ values[i] + " your tree is missing " + Arrays.toString(missing.toArray()));
 				}
 			} catch (Throwable t) {
 				String oops = "\nTree before the problem occurred:\n";
-				oops +=before;
 				oops += before + "\n";
-				oops += "What went wrong: " + t.getMessage() + "\n";
 				oops += "Tree that triggered this problem:" + "\n";
 				oops += TreeToStrings.toTree(tree);
 				t.printStackTrace();
@@ -58,7 +58,51 @@ public class TestInsertExists {
 			bstv.check();
 
 		}
-	} 
+	}
+
+	@Test
+	public void testRemoveExists() {
+		BSTValidator<Integer> bstv = genTree();
+		AVLTree<Integer> tree = bstv.tree;
+		int num = 15;
+		for(int i=0; i<num; i++) {
+			verifySize("before Insert", tree, i);
+			bstv.check();
+			tree.insert(i);
+			verifySize("after Insert", tree, i+1);
+			bstv.check();
+		}
+		 Set<Integer> removed = new HashSet<>();
+		for (int i=0; i < num/2; ++i) {
+			verifySize("before Remove", tree, num - i);
+			bstv.check();
+			String before = TreeToStrings.toTree(tree);
+			tree.remove((i + 7) % num);
+			removed.add((i+7)%num);
+			List<Integer> missing = new ArrayList<>();
+			for(int j=0; j<num; ++j) {
+				if(!removed.contains(j)) {
+					// this element should still be in the tree
+					if(!tree.exists(j)) 
+						missing.add(j);
+				}
+			}
+			try {
+				if(missing.size()>0) {
+					throw new BSTValidationError("\nAfter removing "+ (i+7)%num + " your tree is missing " + Arrays.toString(missing.toArray()));
+				}
+			} catch (Throwable t) {
+				String oops = "\nTree before the problem occurred:\n";
+				oops += before + "\n";
+				oops += "Tree that triggered this problem:" + "\n";
+				oops += TreeToStrings.toTree(tree);
+				t.printStackTrace();
+				throw new BSTValidationError(t + "" + oops);
+			}
+			bstv.check();
+			verifySize("after Remove", tree, num - i - 1);
+		}
+	}
 
 
 	private void verifySize(String event, AVLTree<?> tree, int expectedSize) {
