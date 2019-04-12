@@ -264,7 +264,7 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rightRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return null;
+	    return root.left;
 	}
 
 	//
@@ -276,7 +276,7 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> leftRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return null;
+	    return root.right;
 	}
 	
 	/////////////////////////////////////////////////////////////
