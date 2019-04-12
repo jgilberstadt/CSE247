@@ -130,8 +130,7 @@ public class AVLTree<T extends Comparable<T>> {
 			// add new element as leaf of tree
 			TreeNode<T> newNode = new TreeNode<T>(value); 
 			size++;
-			updateHeight(root);
-			return rebalance(root);
+			return newNode;
 	    } else {
 	    	int comparison = value.compareTo(root.value);
 		
@@ -164,7 +163,7 @@ public class AVLTree<T extends Comparable<T>> {
 	// removeHelper()
 	// Recursive procedure to remove a value from the
 	// subtree rooted at "root", if it exists.
-	//
+	//d
 	// RETURNS root node of subtree after insertion
 	//
 	// FIXME: add the necessary code to this function
@@ -185,6 +184,7 @@ public class AVLTree<T extends Comparable<T>> {
 	    			// so return whichever one is not null (or null
 	    			// if both are)
 	    			size--;
+	    			updateHeight(root);
 	    			return (root.left == null ? root.right : root.left);
 	    		} else {
 	    			// node with two subtrees -- replace key
@@ -248,9 +248,12 @@ public class AVLTree<T extends Comparable<T>> {
 	private TreeNode<T> rebalance(TreeNode<T> root) {
 	    // FIXME: fill in the rebalancing code
 	    if (getBalance(root)<-1) {
+	    	if
+	    	root.height=root.height-1;
 	    	return root.left;
 	    }
 	    if (getBalance(root)>1) {
+	    	root.height=root.height-1;
 	    	return root.right;
 	    }
 		return root;
