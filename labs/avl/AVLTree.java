@@ -130,7 +130,8 @@ public class AVLTree<T extends Comparable<T>> {
 			// add new element as leaf of tree
 			TreeNode<T> newNode = new TreeNode<T>(value); 
 			size++;
-			return newNode;
+			updateHeight(root);
+			return rebalance(root);
 	    } else {
 	    	int comparison = value.compareTo(root.value);
 		
@@ -264,7 +265,7 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rightRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return root.left;
+		return root.left;
 	}
 
 	//
@@ -276,7 +277,7 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> leftRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-	    return root.right;
+		return root.right;
 	}
 	
 	/////////////////////////////////////////////////////////////
