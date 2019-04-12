@@ -222,6 +222,7 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private void updateHeight(TreeNode<T> root) {
 	    // FIXME: fill in the update code
+	root.height = Math.max(root.left.height, root.right.height) + 1;
 	}
 
 	//
@@ -231,7 +232,8 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private int getBalance(TreeNode<T> root) {
 	    // FIXME: fill in the balance computation
-	    return 0;
+	  int a = root.right.height-root.left.height;
+		return a;
 	}
 
 	//
@@ -244,7 +246,13 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rebalance(TreeNode<T> root) {
 	    // FIXME: fill in the rebalancing code
-	    return null;
+	    if (getBalance(root)<-1) {
+	    	return root.left;
+	    }
+	    if (getBalance(root)>1) {
+	    	return root.right;
+	    }
+		return root;
 	}
 	
 	//
