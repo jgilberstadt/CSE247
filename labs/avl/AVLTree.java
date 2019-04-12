@@ -37,7 +37,7 @@ public class AVLTree<T extends Comparable<T>> {
 		
 	    	if (comparison == 0) { // found
 	    		return true;
-	    	} else if (comparison < 0) { // still looking - go left
+	    	} else if (comparison > 0) { // still looking - go left
 	    		return existsHelper(value, root.left);
 	    	} else { // still looking - go right
 	    		return existsHelper(value, root.right);
