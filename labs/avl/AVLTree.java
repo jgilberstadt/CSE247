@@ -184,7 +184,7 @@ public class AVLTree<T extends Comparable<T>> {
 	    			// so return whichever one is not null (or null
 	    			// if both are)
 	    			size--;
-	    			updateHeight(root);
+	    			rebalance(root);
 	    			return (root.left == null ? root.right : root.left);
 	    		} else {
 	    			// node with two subtrees -- replace key
@@ -235,7 +235,7 @@ public class AVLTree<T extends Comparable<T>> {
 	}else {
 		right = root.right.height;
 	}
-		root.height = Math.max(left, right) + 1;
+		root.height = (Math.max(left, right) + 1);
 	}
 
 	//
@@ -279,7 +279,14 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rightRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-		return root.left;
+		TreeNode<T> store = root;
+		store.setLeft(root.left.right);
+		store.setRight(root.right);
+		TreeNode<T> newroot = root.left;
+		newroot.setLeft(root.left.left);
+		newroot.setRight(store);
+		root = newroot;
+		return root;
 	}
 
 	//
@@ -291,7 +298,14 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> leftRotate(TreeNode<T> root) {
 	    // FIXME: fill in the rotation code
-		return root.right;
+		TreeNode<T> store = root;
+		store.setRight(root.right.left);
+		store.setLeft(root.left);
+		TreeNode<T> newroot = root.right;
+		newroot.setRight(root.right.right);
+		newroot.setLeft(store);
+		root = newroot;
+		return root;
 	}
 	
 	/////////////////////////////////////////////////////////////
