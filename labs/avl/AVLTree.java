@@ -127,6 +127,7 @@ public class AVLTree<T extends Comparable<T>> {
 		if (root == null) {
 			// add new element as leaf of tree
 			TreeNode<T> newNode = new TreeNode<T>(value);
+			newNode.height=0;
 			size++;
 			return newNode;
 		} else {
