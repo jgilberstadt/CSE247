@@ -272,13 +272,13 @@ public class AVLTree<T extends Comparable<T>> {
 			TreeNode<T> node = root;
 		if (getBalance(root)<-1) {
 		if (getBalance(root.left)>0) {
-		leftRotate(root.left);
+		root.setLeft(leftRotate(root.left));
 		}
 		node=rightRotate(root);
 		}
 		if (getBalance(root)>1) {
 		if (getBalance(root.right)<0) {
-		 rightRotate(root.right);
+		 root.setRight(rightRotate(root.right));
 		 }
 		node=leftRotate(root);
 		 }
