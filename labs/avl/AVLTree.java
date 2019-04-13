@@ -296,14 +296,14 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> rightRotate(TreeNode<T> root) {
 		// FIXME: fill in the rotation code
-		TreeNode<T> b = root.left;
-		TreeNode<T> bRight = b.right;
-		b.setRight(root);
-		root.setLeft(bRight);
-		b.setLeft(b.left);
+		TreeNode<T> nroot = root.left;
+		TreeNode<T> node = nroot.right;
+		nroot.setLeft(nroot.left);
+		nroot.setRight(root);
+		root.setLeft(node);
 		updateHeight(root);
-		updateHeight(b);
-		return b;
+		updateHeight(nroot);
+		return nroot;
 	}
 
 	//
@@ -315,14 +315,14 @@ public class AVLTree<T extends Comparable<T>> {
 	//
 	private TreeNode<T> leftRotate(TreeNode<T> root) {
 		// FIXME: fill in the rotation code
-		TreeNode<T> b = root.right;
-		TreeNode<T> bLeft = b.left;
-		b.setLeft(root);
-		root.setRight(bLeft);
-		b.setRight(b.right);
+		TreeNode<T> nroot = root.right;
+		TreeNode<T> node = nroot.left;
+		nroot.setRight(nroot.right);
+		nroot.setLeft(root);
+		root.setRight(node);
+		updateHeight(nroot);
 		updateHeight(root);
-		updateHeight(b);
-		return b;
+		return nroot;
 	}
 
 	/////////////////////////////////////////////////////////////
