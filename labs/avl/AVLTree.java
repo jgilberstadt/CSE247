@@ -301,8 +301,8 @@ public class AVLTree<T extends Comparable<T>> {
 		nroot.setLeft(nroot.left);
 		nroot.setRight(root);
 		root.setLeft(node);
-		updateHeight(root);
 		updateHeight(nroot);
+		updateHeight(root);
 		return nroot;
 	}
 
