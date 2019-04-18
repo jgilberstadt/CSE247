@@ -56,11 +56,6 @@ public class TestShortestPathDist {
 		expectedPath = gg.getShortestPath();
 		outputPath   = sp.returnPath(gg.end());
 
-//		int i = 0;
-//		for(Edge e : expectedPath) {
-//			assertEquals("Shortest path contained an incorrect edge.", e, outputPath.get(i++));
-//		}
-
 		assertEquals("Length of the shortest path was incorrect.", gg.getShortestPathValue(), 
 				sp.returnLengthDirect(gg.end()));
 	}
