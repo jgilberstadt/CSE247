@@ -138,4 +138,14 @@ public class ShortestPaths {
 	
     	return pathLength;
     }
+
+    //
+    // returnLengthDirect()
+    // Expose the current-best distance estimate stored at a vertex.
+    // Useful for comparing to ground-truth shortest-path distance
+    //   in the absence of parent pointers.
+    public int returnLengthDirect(Vertex endVertex) {
+    	Decreaser<VertexAndDist> endhandle = handles.get(endVertex);
+    	return endhandle.getValue().distance;
+    }
 }
