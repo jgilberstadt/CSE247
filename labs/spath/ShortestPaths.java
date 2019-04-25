@@ -107,7 +107,8 @@ public class ShortestPaths {
     	VertexAndDist v = dec.getValue();
     	int alt = u.distance + weights.get(v);
     	if (alt < v.distance) {
-    	
+    	dec.decrease(new VertexAndDist(v.vertex, alt));
+    	parentEdges.put(v.vertex, e);
     	}
     	}
     	}
@@ -127,7 +128,12 @@ public class ShortestPaths {
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-    	
+    	Decreaser<VertexAndDist> startHandle = handles.get(startVertex);
+    	VertexAndDist vd = startHandle.getValue();
+    	startHandle.decrease(new VertexAndDist(vd.vertex, 0));
+    	while (!vd.vertex.equals(endVertex)) {
+    	path.add(vd);
+    	}
     	return path;
     }
     
