@@ -100,6 +100,17 @@ public class ShortestPaths {
     	// recording the parent edges of each vertex in parentEdges.
     	// FIXME
     	//
+    	while(!pq.isEmpty()) {
+    	VertexAndDist u = pq.extractMin();
+    	for (Edge e: u.vertex.edgesFrom()) {
+    	Decreaser<VertexAndDist> dec = handles.get(e.to);
+    	VertexAndDist v = dec.getValue();
+    	int alt = u.distance + weights.get(v);
+    	if (alt < v.distance) {
+    	
+    	}
+    	}
+    	}
     }
     
     
@@ -116,7 +127,7 @@ public class ShortestPaths {
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-	
+    	
     	return path;
     }
     
@@ -137,15 +148,5 @@ public class ShortestPaths {
     	}
 	
     	return pathLength;
-    }
-
-    //
-    // returnLengthDirect()
-    // Expose the current-best distance estimate stored at a vertex.
-    // Useful for comparing to ground-truth shortest-path distance
-    //   in the absence of parent pointers.
-    public int returnLengthDirect(Vertex endVertex) {
-    	Decreaser<VertexAndDist> endhandle = handles.get(endVertex);
-    	return endhandle.getValue().distance;
     }
 }

@@ -152,7 +152,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 * 
 	 * @param where the index into the array where the parent lives
 	 */
-	private void heapify(int where) {
+	private void heapify(int num) {
 		//
 		// As described in lecture
 		// FIXME
@@ -161,41 +161,41 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 			ticker.tick();
 			return;
 		}
-		if (2 * where + 1 <= size) {
-			if (array[2 * where].getValue().compareTo(array[where].getValue()) > 0
-					&& array[2 * where + 1].getValue().compareTo(array[where].getValue()) > 0) {
+		if (2 * num + 1 <= size) {
+			if (array[2 * num].getValue().compareTo(array[num].getValue()) > 0
+					&& array[2 * num + 1].getValue().compareTo(array[num].getValue()) > 0) {
 				ticker.tick();
 				return;
 			}
-			if (array[2 * where + 1].getValue().compareTo(array[2 * where].getValue()) > 0) {
-				Decreaser<T> store = array[2 * where];
-				array[2 * where] = array[where];
-				array[where] = store;
-				array[where].loc = where;
-				array[2 * where].loc = 2 * where;
-				heapify(2 * where);
+			if (array[2 * num + 1].getValue().compareTo(array[2 * num].getValue()) > 0) {
+				Decreaser<T> store = array[2 * num];
+				array[2 * num] = array[num];
+				array[num] = store;
+				array[num].loc = num;
+				array[2 * num].loc = 2 * num;
+				heapify(2 * num);
 				ticker.tick(6);
 			} else {
-				Decreaser<T> store = array[2 * where + 1];
-				array[2 * where + 1] = array[where];
-				array[where] = store;
-				array[where].loc = where;
-				array[2 * where + 1].loc = 2 * where + 1;
-				heapify(2 * where + 1);
+				Decreaser<T> store = array[2 * num + 1];
+				array[2 * num + 1] = array[num];
+				array[num] = store;
+				array[num].loc = num;
+				array[2 * num + 1].loc = 2 * num + 1;
+				heapify(2 * num + 1);
 				ticker.tick(6);
 			}
-		} else if (2 * where <= size) {
-			if (array[2 * where].getValue().compareTo(array[where].getValue()) > 0) {
+		} else if (2 * num <= size) {
+			if (array[2 * num].getValue().compareTo(array[num].getValue()) > 0) {
 				ticker.tick();
 				return;
-			} else if (array[2 * where].getValue().compareTo(array[where].getValue()) < 0) {
-				Decreaser<T> store = array[2 * where];
-				array[2 * where] = array[where];
-				array[where] = store;
-				array[where].loc = where;
-				array[2 * where].loc = 2 * where;
+			} else if (array[2 * num].getValue().compareTo(array[num].getValue()) < 0) {
+				Decreaser<T> store = array[2 * num];
+				array[2 * num] = array[num];
+				array[num] = store;
+				array[num].loc = num;
+				array[2 * num].loc = 2 * num;
 
-				heapify(2 * where);
+				heapify(2 * num);
 				ticker.tick(6);
 			}
 		}
