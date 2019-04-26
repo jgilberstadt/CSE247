@@ -4,7 +4,7 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "a.bear")
 	
-1.
+1. Josh Gilberstadt		josh.gilberstadt
 2.
 3.
 4.
@@ -13,15 +13,16 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
-Question A1:
+Question A1: A=0, B=4, C=6, F=9, D=12, E=14
 
-Question A2:
+Question A2: A-B, B-C, C-F, F-D, and D-E
 
-Question A3:
+Question A3: MST: A-F, F-C, C-B, F-D, D-E, Wtot=13
 
-Question B1:
+Question B1: No- the graph must terminate after a certain number of steps
 
-Question B2:
+Question B2: There are no cycles before e is added, so e can only increse
+the total number of cycles by 1
 
 Question B3:
 
@@ -37,7 +38,7 @@ Question B8:
 
 Question C1:
 
-Question C2:
+Question C2: The lightest container should be loaded first
 
 Question C3:
 
